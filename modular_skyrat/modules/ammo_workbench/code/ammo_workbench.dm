@@ -260,7 +260,7 @@
 	var/list/required_materials = new_casing.get_material_composition()
 
 	if(!materials.has_materials(required_materials))
-		error_message = "INSUFFICIENT MATERIALS"
+		error_message = "INSUFFICIENT MATERIALS: " + required_materials
 		error_type = "bad"
 		ammo_fill_finish(FALSE)
 		qdel(new_casing)
